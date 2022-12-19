@@ -74,7 +74,7 @@ namespace ProjectEventMeals
         }
         private void showAllGuestsSelections()
         {
-            string select = "SELECT item_name, COUNT(*) as 'מספר הזמנות'\r\nFROM Items\r\nGROUP BY item_name";
+            string select = "SELECT item_name as 'פריט', COUNT(*) as 'מספר הזמנות'\r\nFROM Items\r\nGROUP BY item_name";
 
             SqlDataAdapter adapter = new SqlDataAdapter(select, ConnectionString);
             //יצירת טבלה זמנית בזכרון והכנסת הנתונים אליה
