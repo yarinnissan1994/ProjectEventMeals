@@ -69,7 +69,7 @@ namespace ProjectGuest
                 SqlCommand cmd = new SqlCommand(insert, parent.connection);
                 cmd.Parameters.AddWithValue("@guest_name", lblGuestName.Text);
                 cmd.Parameters.AddWithValue("@category_name", lblCategory.Text);
-                cmd.Parameters.AddWithValue("@item_name", txtItem.Text);
+                cmd.Parameters.AddWithValue("@item_name", item);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
